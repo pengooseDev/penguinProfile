@@ -53,17 +53,6 @@ const imageReceived = async () => {
     }
 };
 
-/*
-const convertedDiv = await new html2canvas(canvasDiv, {
-    backgroundColor: "transparent",
-    allowTaint: true,
-    useCORS: false,
-});
-const url = convertedDiv.toDataURL("image/jpeg");
-console.log(url);
-downloadURI(url, "Pengoose.jpeg");
-};*/
-
 const downloadURI = (uri, name) => {
     var link = document.createElement("a");
     link.download = name;
@@ -71,27 +60,5 @@ const downloadURI = (uri, name) => {
     document.body.appendChild(link);
     link.click();
 };
-
-/*
-//downLoad
-const handleDown = async () => {
-    const convertedDiv = await new html2canvas(canvasDiv, {
-        backgroundColor: "transparent",
-        allowTaint: true,
-        useCORS: true,
-    });
-    const url = convertedDiv.toDataURL("image/jpeg");
-    console.log(url);
-    downloadURI(url, "Pengoose.jpeg");
-};
-
-const downloadURI = (uri, name) => {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-};
-*/
 
 downLoad.addEventListener("click", handleDown);
